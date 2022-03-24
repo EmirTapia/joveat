@@ -7,6 +7,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ModalsComponent } from './pages/modals/modals.component';
 import { NoEncontradoComponent } from './pages/no-encontrado/no-encontrado.component';
 import { PaquetesComponent } from './pages/paquetes/paquetes.component';
+import { PaqueteComponent } from './pages/paquete/paquete.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'contacto', component: ContactoComponent},
   {path:'blog', component: BlogComponent},
   {path:'paquetes', component: PaquetesComponent},
+  {path:'paquete/:name', component: PaqueteComponent},
   {path:'modals', component: ModalsComponent},
   {path:'**', component: NoEncontradoComponent},
 ];

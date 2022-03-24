@@ -7,11 +7,7 @@ import {Paquete} from './paquete.model';
   styleUrls: ['./paquetes.component.css']
 })
 export class PaquetesComponent implements OnInit {
-  onClick(event:any)
-  {
-      let paqs = this.paquetes.filter(paq => paq.nombre == event.target.id);
-      this.paq = paqs[0];
-  }
+
   public paquetes : Paquete[];
   public paq : Paquete = {
     nombre:'',
@@ -27,7 +23,7 @@ export class PaquetesComponent implements OnInit {
     this.paquetes =[{
       nombre:'Zorro rojo',
       precio:400.00,
-      preciopaquete:3800.00,
+      preciopaquete:((400 * 10)-400),
       dirigido:'Dirigido para personas que buscan mejorar sus hábitos de alimentación.',
       descripcion:['•	Una consulta nutricional para conocer sus objetivos y evaluar su estado nutricio inicial.',
       '•	Antropometría completa (peso, masa grasa, masa muscular, circunferencias).',

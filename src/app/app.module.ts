@@ -12,6 +12,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { PaquetesComponent } from './pages/paquetes/paquetes.component';
 import { ModalsComponent } from './pages/modals/modals.component';
 import { NoEncontradoComponent } from './pages/no-encontrado/no-encontrado.component';
+import { PaqueteComponent } from './pages/paquete/paquete.component';
 
 
 
@@ -26,7 +27,8 @@ import { NoEncontradoComponent } from './pages/no-encontrado/no-encontrado.compo
     BlogComponent,
     PaquetesComponent,
     ModalsComponent,
-    NoEncontradoComponent
+    NoEncontradoComponent,
+    PaqueteComponent
   ],
   imports: [
     BrowserModule,

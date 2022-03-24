@@ -18,17 +18,17 @@
         </div>
         <div class="courses courses-wrapper-02">
             <div class="row gx-xxl-5">
-                <div *ngFor="let paquete of paquetes ;index as i;" class="col-lg-4 col-sm-6">
+                <div *ngFor="let paquete of paquetes" class="col-lg-4 col-sm-6">
                     <div class="single-courses">
                         <div class="courses-images">
-                            <a><img [id]="paquete.nombre" (click)="onClick($event)" data-bs-toggle="modal" href="#Paquete" src="assets/images/courses/courses-1.png" alt="courses"></a>
+                            <a><img routerLink="/paquete/{{paquete.nombre}}" src="assets/images/courses/courses-1.png" alt="courses"></a>
                         </div>
                         <div class="courses-content">
                             <div class="courses-price">
                                 <span class="price">${{paquete.precio}}</span>
                             </div>
                             <div class="content-wrapper">
-                                <h4 class="title"><a [id]="paquete.nombre" (click)="onClick($event)" data-bs-toggle="modal" href="#Paquete">{{paquete.nombre}}</a></h4>
+                                <h4 class="title"><a routerLink="/paquete/{{paquete.nombre}}">{{paquete.nombre}}</a></h4>
                                 <ul class="meta">
                                     <li>{{paquete.duracion}}</li>
                                     <li>{{paquete.tipo}}</li>
@@ -40,137 +40,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal" id="Paquete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                        <div class="modal-dialog modal-xl" role="document">
-                            <div class="modal-content modal-xl">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">{{paq.nombre}}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="courses-details-wrapper">
-                                            <div class="row gx-xxl-5">
-                                                <div class="col-lg-12">
-                                                    <div class="courses-details">
-                                                        <div class="courses-details-images">
-                                                            <img src="assets/images/courses/courses-details.jpg" alt="Courses Details">
-                                                        </div>
-                                                        <div class="courses-details-tab">
-                                                            <div class="details-tab-menu">
-                                                                <ul class="nav justify-content-center">
-                                                                    <h3 class="footer-widget-title">¿Qué incluye?</h3>
-                                                                </ul>
-                                                                <div class="details-tab-content">
-                                                                    <div class="tab-content">
-                                                                        <div class="tab-pane fade show active" id="description">
-                                                                            <div class="tab-description">
-                                                                                <div let class="description-wrapper">
-                                                                                    <p *ngFor="let descr of paq.descripcion" align="justify">
-                                                                                        {{descr}}</p>
-                                                                                </div>
-                                                                                <br />
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="sidebar">
-                                                        <div class="sidebar-widget widget-information">
-                                                            <div class="info-price">
-                                                                <span class="price">
-                                                                    <i class="icofont-clock-time"></i>
-                                                                </span>
-                                                            </div>
-                                                            <div class="info-list">
-                                                                <span>La duracion estimada para la consulta {{ paq.nombre}} es de: {{paq.duracion}}.</span>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="sidebar">
-                                                        <div class="sidebar-widget widget-information">
-                                                            <div class="info-list">
-                                                                <strong>
-                                                                    <div class="info-price">
-                                                                        <P>Precio por consulta: <span class="price">${{paq.precio}}</span></P>
-                                                                    </div>
-                                                                    <div class="info-price">
-                                                                        <P>Precio por paquete (10 consultas): <span class="price">${{paq.preciopaquete}}</span></P>
-                                                                    </div>                                                                        </strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <div class="sidebar">
-                                                        <div class="sidebar-widget widget-information">
-                                                            <div class="info-price">
-                                                                <span class="price">
-                                                                    NOTAS IMPORTANTES 
-                                                                </span>
-                                                            </div>
-                                                            <ul>
-                                                                <p>Si tu consulta es presencial:</p>
-                                                                <li>
-                                                                    <p align="justify"> Procura llevar ropa cómoda en cada consulta, que no sea holgada, (short y top de ejercicio).</p>
-                                                                    <p align="justify"> Si tienes análisis de sangre no mayores a 3 meses, puedes llevarme una copia o tomarles foto para poder compartírmelos.</p>
-                                                                    <p align="justify"> Si tomas algún medicamento o multivitamínico, anota sus nombres, la dosis y la frecuencia con la que lo consumes y llévalo a la consulta. </p>
-                                                                    <p align="justify"> Si vives con diabetes o hipertensión lleva tu diario de glucosas/presión.</p>
-                                                                </li>
-                                                            </ul><br>
-                                                            <ul>
-                                                                <p>Si tu consulta es a distancia:</p>
-                                                                <li>
-                                                                    <p align="justify"> Procura tener tu peso y tu estatura más reciente (no mayor a 5 días programada la consulta).</p>
-                                                                    <p align="justify"> Si tienes análisis de sangre no mayores a 3 meses, puedes escanearlos o tomarles foto para poder compartírmelos, de preferencia enviarlos antes de la consulta. </p>
-                                                                    <p align="justify"> Si tomas algún medicamento o multivitamínico, anota sus nombres, la dosis y la frecuencia con la que lo consumes y tenlos a la mano para el día de la consulta.</p>
-                                                                    <p align="justify"> Si vives con diabetes o hipertensión ten cerca tu diario de glucosas/presión.</p>
-                                                                </li>
-                                                            </ul>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sidebar-widget align-items-center">
-                                                    <!-- <div class="info-btn">
-                                                        <a href="contacto.html" class="btn btn-secondary btn-hover-primary">Contacto</a>
-                                                    </div> -->
-                                                    <h4 class="widget-title">Compartir:</h4>
-
-                                                    <ul class="social">
-                                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="icofont-linkedin"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).onreadystatechange(function() {
-            $('.modal').modal('show');
-        });
-    </script>
-    <script src="assets/js/main.js"></script>
+</div>
