@@ -2,7 +2,6 @@
     <div class="container">
         <div class="page-banner-content">
             <h2 class="page-title">{{name}}</h2>
-
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a routerLink="inicio">Inicio</a></li>
                 <li class="breadcrumb-item"><a routerLink="/paquetes">Paquete</a></li>
@@ -14,96 +13,149 @@
 <div class="section section-padding-02">
     <div class="container">
         <div class="courses-details-wrapper">
-            <div class="row gx-xxl-5">
+            <div class="row">
                 <div class="col-lg-8">
-                    <div class="courses-details">
-                        <div class="courses-details-images">
-                            <img src="assets/images/courses/courses-details.jpg" alt="Courses Details">
+                    <div class="courses-details-images">
+                        <img src="assets/images/courses/courses-details.jpg" alt="Courses Details">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class=" widget-information">
+                        <div class="info-price">
+                            <strong>Precio por consulta</strong>
+                            <p>Primera vez</p>
+                            <span class="price">${{paq.precio}}.00</span>
+                            <p>Consulta subsecuente</p>
+                            <span class="price">${{paq.precio - 100}}.00</span>
                         </div>
-                        <div class="courses-details-tab">
-                            <div class="details-tab-menu">
-                                <ul class="nav justify-content-center">
-                                    <h3 class="footer-widget-title">¿Qué incluye?</h3>
-                                </ul>
-                                <div class="details-tab-content">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade show active" id="description">
-                                            <div class="tab-description">
-                                                <div let class="description-wrapper">
-                                                    <p align="justify">
-                                                    </p>
-                                                </div>
-                                                <br />
-                                            </div>
-                                        </div>
-                                    </div>
+                        <hr>
+                        <div class="info-price">
+                            <strong>Precio por paquete (10 consultas)</strong>
+                            <span class="price">${{(paq.precio * 10)-paq.precio}}.00</span>
+                            <br>
+                            <div class="info-list">
+                                <span align="justify">Tiempo aproximado por sesión: {{paq.duracion}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 ">
+                    <div class="sidebar">
+                        <div class="sidebar-widget widget-information">
+                            <div class="info-price">
+                                <span class="price">
+                                    ¿Qué incluye?
+                                </span>
+                                <br>
+                                <br>
+                                <p align="justify" *ngFor="let desc of paq.descripcion">
+                                    {{desc+"\n"}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 ">
+                    <div class="sidebar">
+                        <div class="sidebar-widget widget-information">
+                            <div class="info-price">
+                                <span class="price">
+                                    <img src="assets/images/shape/shape-2.png"><br>
+                                    NOTAS IMPORTANTES
+                                </span>
+                                <br>
+                                <br>
+                                <div *ngIf="paq.tipoConsulta == 1">
+                                    <ul>
+                                        <li>
+                                            <strong align="justify"> Procura llevar ropa cómoda en cada consulta, que no
+                                                sea
+                                                holgada, (short y top de ejercicio).</strong>
+                                        </li>
+                                        <li><strong align="justify"> Si tienes análisis de sangre no mayores a 3 meses,
+                                                puedes llevarme una copia o tomarles foto para poder
+                                                compartírmelos.</strong>
+                                        </li>
+                                        <li><strong align="justify"> Si tomas algún medicamento o multivitamínico, anota
+                                                sus
+                                                nombres, la dosis y la frecuencia con la que lo consumes y llévalo a la
+                                                consulta. </strong>
+                                        </li>
+                                        <li><strong align="justify"> Si vives con diabetes o hipertensión lleva tu
+                                                diario de
+                                                glucosas/presión.</strong></li>
+                                    </ul>
+                                </div>
+                                <div *ngIf="paq.tipoConsulta == 2">
+                                    <ul>
+                                        <li>
+                                            <strong align="justify"> Procura tener tu peso y tu estatura más reciente
+                                                (no
+                                                mayor a 5 días programada la consulta).</strong>
+                                            <strong align="justify"> Si tienes análisis de sangre no mayores a 3 meses,
+                                                puedes escanearlos o tomarles foto para poder compartírmelos, de
+                                                preferencia
+                                                enviarlos antes de la consulta. </strong>
+                                            <strong align="justify"> Si tomas algún medicamento o multivitamínico, anota
+                                                sus
+                                                nombres, la dosis y la frecuencia con la que lo consumes y tenlos a la
+                                                mano
+                                                para el día de la consulta.</strong>
+                                            <strong align="justify"> Si vives con diabetes o hipertensión ten cerca tu
+                                                diario de glucosas/presión.</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div *ngIf="paq.tipoConsulta == 3">
+                                    <ul>
+                                        <ul>
+                                            <strong>Si tu consulta es presencial:</strong>
+                                            <li>
+                                                <strong align="justify"> Procura llevar ropa cómoda en cada consulta,
+                                                    que no
+                                                    sea holgada, (short y top de ejercicio).</strong>
+                                                <strong align="justify"> Si tienes análisis de sangre no mayores a 3
+                                                    meses,
+                                                    puedes llevarme una copia o tomarles foto para poder
+                                                    compartírmelos.</strong>
+                                                <strong align="justify"> Si tomas algún medicamento o multivitamínico,
+                                                    anota
+                                                    sus nombres, la dosis y la frecuencia con la que lo consumes y
+                                                    llévalo a
+                                                    la consulta. </strong>
+                                                <strong align="justify"> Si vives con diabetes o hipertensión lleva tu
+                                                    diario de glucosas/presión.</strong>
+                                            </li>
+                                        </ul>
+                                        <br>
+                                        <p>Si tu consulta es a distancia:</p>
+                                        <li>
+                                            <strong align="justify"> Procura tener tu peso y tu estatura más reciente
+                                                (no
+                                                mayor a 5 días programada la consulta).</strong>
+                                            <strong align="justify"> Si tienes análisis de sangre no mayores a 3 meses,
+                                                puedes escanearlos o tomarles foto para poder compartírmelos, de
+                                                preferencia
+                                                enviarlos antes de la consulta. </strong>
+                                            <strong align="justify"> Si tomas algún medicamento o multivitamínico, anota
+                                                sus
+                                                nombres, la dosis y la frecuencia con la que lo consumes y tenlos a la
+                                                mano
+                                                para el día de la consulta.</strong>
+                                            <strong align="justify"> Si vives con diabetes o hipertensión ten cerca tu
+                                                diario de glucosas/presión.</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-btn">
+                                    <a routerLink="/contacto" class="btn btn-secondary btn-hover-primary">Contacto</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="sidebar">
-                        <div class="sidebar-widget widget-information">
-                            <div class="info-price">
-                                <span class="price">$400.00</span>
-                            </div>
-                            <div class="info-list">
-                                <ul>
-                                    <li><i class="icofont-clock-time"></i> <strong>Duracion</strong> <span>1 hr 15 mins</span></li>
-                                    <li><i class="icofont-location-pin"></i> <strong>Instructor</strong> <span>Pamela Foster</span></li>
-                                    <li><i class="icofont-ui-video-play"></i> <strong>Lectures</strong> <span>29</span></li>
-                                    <li><i class="icofont-bars"></i> <strong>Level</strong> <span>Secondary</span></li>
-                                    <li><i class="icofont-book-alt"></i> <strong>Language</strong> <span>English</span></li>
-                                    <li><i class="icofont-certificate-alt-1"></i> <strong>Certificate</strong> <span>Yes</span></li>
-                                </ul>
-                            </div>
-                            <div class="info-btn">
-                                <a href="contacto.html" class="btn btn-secondary btn-hover-primary">Contacto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="sidebar">
-                        <div class="sidebar-widget widget-information">
-                            <div class="info-price">
-                                <span class="price">
-                                    NOTAS IMPORTANTES 
-                                </span>
-                            </div>
-                            <ul>
-                                <p>Si tu consulta es presencial:</p>
-                                <li>
-                                    <p align="justify"> Procura llevar ropa cómoda en cada consulta, que no sea holgada, (short y top de ejercicio).</p>
-                                    <p align="justify"> Si tienes análisis de sangre no mayores a 3 meses, puedes llevarme una copia o tomarles foto para poder compartírmelos.</p>
-                                    <p align="justify"> Si tomas algún medicamento o multivitamínico, anota sus nombres, la dosis y la frecuencia con la que lo consumes y llévalo a la consulta. </p>
-                                    <p align="justify"> Si vives con diabetes o hipertensión lleva tu diario de glucosas/presión.</p>
-                                </li>
-                            </ul><br>
-                            <ul>
-                                <p>Si tu consulta es a distancia:</p>
-                                <li>
-                                    <p align="justify"> Procura tener tu peso y tu estatura más reciente (no mayor a 5 días programada la consulta).</p>
-                                    <p align="justify"> Si tienes análisis de sangre no mayores a 3 meses, puedes escanearlos o tomarles foto para poder compartírmelos, de preferencia enviarlos antes de la consulta. </p>
-                                    <p align="justify"> Si tomas algún medicamento o multivitamínico, anota sus nombres, la dosis y la frecuencia con la que lo consumes y tenlos a la mano para el día de la consulta.</p>
-                                    <p align="justify"> Si vives con diabetes o hipertensión ten cerca tu diario de glucosas/presión.</p>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar-widget align-items-center">
-                    <h4 class="widget-title">Compartir:</h4>
-
-                    <ul class="social">
-                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                        <li><a href="#"><i class="icofont-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
+    <br>
 </div>

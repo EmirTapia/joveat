@@ -5,5 +5,6 @@ export interface Paquete{
     dirigido:string,
     descripcion:string[],
     duracion:string,
-    tipo:string
+    tipo:string[],
+    tipoConsulta:number
 }

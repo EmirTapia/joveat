@@ -16,33 +16,29 @@ export class PaquetesComponent implements OnInit {
     dirigido:'',
     descripcion:[''],
     duracion:'',
-    tipo:'',
+    tipo:[''],
+    tipoConsulta:3
   };
-  private necesita:string[]=['']
   constructor() {
     this.paquetes =[{
       nombre:'Zorro rojo',
       precio:400.00,
-      preciopaquete:((400 * 10)-400),
+      preciopaquete:0,
       dirigido:'Dirigido para personas que buscan mejorar sus hábitos de alimentación.',
-      descripcion:['•	Una consulta nutricional para conocer sus objetivos y evaluar su estado nutricio inicial.',
-      '•	Antropometría completa (peso, masa grasa, masa muscular, circunferencias).',
-      '•	Lista del súper y lista de equivalentes.',
-      '•	Plan de alimentación individualizado por equivalentes y 2 opciones de menú personalizados que incluyen ideas de hidratación, metas y recomendaciones alimentarias afines a tus objetivos.',
-      '•	Resolución de dudas y apoyo vía WhatsApp.',
-      '•	Sesiones educativas con temas de alimentación.',
-      '•	Documentos digitalizados de la consulta nutricia (enviado por correo electrónico o WhatsApp en un plazo máximo de 48 horas posteriores a la consulta) (días hábiles).'],
+      descripcion:[''],
       duracion:'60 minutos',
-      tipo:'Presencial',
+      tipo:['Presencial'],
+      tipoConsulta:0
     },
     {
-      nombre:'Zorro veloz',
+      nombre:'Zorro velóz',
       precio:600.00,
       preciopaquete:5800.00,
-      dirigido:'Dirigido para personas que buscan mejorar sus hábitos de alimentación.',
-      descripcion:['Sesiones educativas con temas de alimentación, medidas y porciones caseras, composición corporal, lectura de etiquetas, conciencia corporal, alimentación emocional, recomendaciones de actividad física y más… y otra y otra'],
+      dirigido:'Dirigido para personas que viven con diabetes mellitus tipo 2.',
+      descripcion:[''],
       duracion:'60 minutos',
-      tipo:'Presencial online',
+      tipo:['Presencial'],
+      tipoConsulta:1
     }]
    }
   ngOnInit(): void {

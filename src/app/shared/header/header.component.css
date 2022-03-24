@@ -3,27 +3,27 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #FAC19C;
+    background-color: #FCD8B4;
     align-items: center;
 }
+
 li a {
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: white;
-    text-emphasis-color: red;
+    color: #D06137;
 }
+
 li a:hover {
     color: #D06137;
-    text-decoration: underline wavy #C6D73D;
+    text-decoration: underline wavy white;
 }
 
-.container-fluid{
-    background-color: #FAC19C;
-}
-#headerNav{
-    background-color: #FAC19C;
+.container-fluid {
+    background-color: #FCD8B4;
 }
 
-
+#headerNav {
+    background-color: #FCD8B4;
+}
