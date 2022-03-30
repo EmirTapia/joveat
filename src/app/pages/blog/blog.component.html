@@ -1,9 +1,9 @@
 <div class="section page-banner-section" style="background-image: url(assets/images/page-banner.jpg);">
     <div class="container">
         <div class="page-banner-content">
-            <h2 class="page-title">BLog Post</h2>
+            <h2 class="page-title">Blog</h2>
             <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink='/inicio'>Inicio</a></li>
                 <li class="breadcrumb-item active">Blog</li>
             </ul>
         </div>
@@ -13,216 +13,27 @@
     <div class="container">
         <div class="blog-wrapper-02">
             <div class="row gx-xxl-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">It was popularised sheets the
-                                    release contain</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="title"><a href="blog-details-left-sidebar.html"> I want to show you how to live
-                                    healthily and have..</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">Lots of energy and to feel like
-                                    you are really</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
 
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">Thriving, not just surviving is
-                                    invincible, so we all</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
+                <div *ngFor="let bl of blog" class="col-lg-4 col-md-6">
+                    <a routerLink="/blog/{{bl.nombre}}">
+                        <div class="single-blog">
+                            <div class="blog">
+                                <div class="blog-date-meta">
+                                    <span>
+                                        <strong>{{bl.fecha[0]}}</strong>
+                                        {{bl.fecha[1]}}
+                                    </span>
+                                    <div class="meta">
+                                        <p class="author">Por: <a routerLink="/acerca-de-mi">Jovita Fernanda Soto Ramírez</a></p>
+                                    </div>
                                 </div>
+                                <h4 class="title"><a routerLink="/blog/{{bl.nombre}}">{{bl.nombre}}</a></h4>
+                                <p>Breve descripcion.
+                                </p>
                             </div>
+                        </div>
+                    </a>
 
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">It was popularised sheets the
-                                    release contain</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">As you follow my blog you will be
-                                    given advice</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">Health, wellbeing, recipes and
-                                    shortcuts to make</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">Lots of energy and to feel like
-                                    you are really</a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog">
-                            <div class="blog-date-meta">
-                                <span>
-                                    <strong>24</strong>
-                                    Feb
-                                </span>
-                                <div class="meta">
-                                    <p class="author">By: <a href="#">Maddie Rife</a></p>
-                                    <ul>
-                                        <li>87 Likes</li>
-                                        <li>58 Share</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <h4 class="title"><a href="blog-details-left-sidebar.html">Need to look after ourselves and
-                                    that means physical </a></h4>
-                            <p>Lorem sum same dummy text theme industry psum have been them industry the leaf into type
-                                setting.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

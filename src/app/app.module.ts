@@ -13,6 +13,8 @@ import { PaquetesComponent } from './pages/paquetes/paquetes.component';
 import { ModalsComponent } from './pages/modals/modals.component';
 import { NoEncontradoComponent } from './pages/no-encontrado/no-encontrado.component';
 import { PaqueteComponent } from './pages/paquete/paquete.component';
+import { ArticuloComponent } from './pages/articulo/articulo.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 
 
@@ -28,7 +30,9 @@ import { PaqueteComponent } from './pages/paquete/paquete.component';
     PaquetesComponent,
     ModalsComponent,
     NoEncontradoComponent,
-    PaqueteComponent
+    PaqueteComponent,
+    ArticuloComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
