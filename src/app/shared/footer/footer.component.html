@@ -7,23 +7,25 @@
                     <div class="row">
                         <div class="footer-widget col-lg-3 col-md-6 mb-4 mb-md-0">
                             <ul class="widget-link">
-                                <li><a class="active" routerLink="inicio">Inicio</a></li>
-                                <li><a routerLink="acerca-de-mi">Acerca de mí</a></li>
-                                <li><a href="paquetes.html">Paquetes</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
+                                <li routerLinkActive="active"><a routerLink="/inicio">Inicio</a></li>
+                                <li routerLinkActive="active"><a routerLink="/acerca-de-mi">Acerca de mí</a></li>
+                                <li routerLinkActive="active"><a routerLink="/paquetes">Paquetes</a></li>
+                                <li routerLinkActive="active"><a routerLink="/blog">Blog</a></li>
+                                <li routerLinkActive="active"><a routerLink="/contacto">Contacto</a></li>
+                                <li routerLinkActive="active"><a routerLink="/faq">Preguntas frecuentes</a></li>
                             </ul>
                         </div>
                         <div class="footer-widget col-lg-6 col-md-6 mb-4 mb-md-0">
-                            <img src="assets/images/shape/shape-2.png" alt="shape" class="shape">
+                            <a routerLink="/inicio">
+                                <img src="assets/images/shape/shape-2.png" alt="shape" class="shape">
+                            </a>
                             <h5 class="footer-widget-title">Sígueme en redes sociales</h5>
                             <br />
                             <a target="blank" href="https://www.facebook.com/joveat.mx/"><i
                                     class="icofont-facebook fa-2x text-white "></i></a>
                             <a target="blank" href="https://www.instagram.com/joveat.mx/"><i
                                     class="icofont-instagram fa-2x text-white "></i></a>
-                            <a target="blank"
-                                href="https://www.linkedin.com/in/jovita-fernanda-soto-ram%C3%ADrez-7a281120a/"><i
+                            <a target="blank" href="https://www.linkedin.com/in/jovita-fernanda-soto-ram%C3%ADrez-7a281120a/"><i
                                     class="icofont-linkedin fa-2x text-white "></i></a>
                             <a target="blank" href="https://www.tiktok.com/@joveat.mx/"><i
                                     class="fab fa-tiktok fa-2x text-white "></i></a>
@@ -31,13 +33,15 @@
                         <div class="footer-widget col-lg-3 col-md-6 mb-4 mb-md-0">
                             <h3 class="footer-widget-title">Horario:</h3>
                             <ul class="widget-link">
-                                <li><a href="contacto.html">Lun-Vie: 9 AM – 6 PM</a></li>
-                                <li><a href="contacto.html">Sabado: 9 AM – 4 PM</a></li>
-                                <li><a href="contacto.html">Domingo: Cerrado</a></li>
+                                <li><a href="/contacto">Lun-Vie: 9 AM – 6 PM</a></li>
+                                <li><a href="/contacto">Sabado: 9 AM – 4 PM</a></li>
+                                <li><a href="/contacto">Domingo: Cerrado</a></li>
                             </ul>
                             <div class="widget-location">
                                 <h3 class="footer-widget-title">Ubicacion:</h3>
-                                <p>Miguel Hidalgo, 11330 Ciudad de México, CDMX</p>
+                                <a href="https://goo.gl/maps/PZkzXJCX1iYicL9u9" target="blank">
+                                    <p>Miguel Hidalgo, C.P. 11330, Ciudad de México, CDMX</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -51,8 +55,7 @@
         <div class="container">
             <div class="copyright-wrapper">
                 <div class="copyright-text">
-                    <p>&copy; {{anio}} <span> Joveat </span> Hecho con <i class="icofont-heart-alt"></i> por <a
-                            href="https://hasthemes.com/" target="_blank">EGTM</a></p>
+                    <p>&copy; {{anio}} <span> Joveat </span> Hecho con <i class="icofont-heart-alt"></i> </p>
                 </div>
             </div>
         </div>
