@@ -120,6 +120,7 @@
 }
 
 body {
+    user-select: none;
     font-size: 15px;
     line-height: 1.75;
     font-weight: 400;
@@ -422,7 +423,6 @@ textarea:-ms-input-placeholder {
 .section-title::before {
     position: absolute;
     content: '';
-    background-image: url(../images/shape/shape-3.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;

@@ -2,9 +2,8 @@
     <div class="container">
         <div class="page-banner-content">
             <h2 class="page-title">FAQ</h2>
-
             <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink='/inicio'>Inicio</a></li>
                 <li class="breadcrumb-item active">FAQ</li>
             </ul>
         </div>
@@ -14,88 +13,29 @@
     <div class="container">
         <div class="faq-wrapper">
             <div class="section-title">
-                <h6 class="sub-title">Question And Answer</h6>
-                <h2 class="main-title">Get easily answer your question</h2>
+                <img src="assets/images/shape/shape-2.png"><br>
+                <h6 id="section-title" class="main-title">Preguntas y respuestas</h6>
+                <br>
+                <h6 class="sub-title">Encuentra facilmente preguntas y respuestas frecuentes</h6>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="faq-accordion">
                         <div class="accordion" id="accordionFaq">
-                            <div class="accordion-item">
-                                <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                    What phytochemicals inhibit mineral absorption?
+                            <div *ngFor="let singlefaq of faqs; index as i;" class="accordion-item">
+                                <button type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i">
+                                    {{singlefaq.pregunta}}
                                 </button>
-                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+                                <div [id]="'collapse'+i" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
                                     <div class="accordion-body">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                    What phytochemicals are considered antioxidants?
-                                </button>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                    Are phytochemicals and phytosterols the same thing?
-                                </button>
-                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                                    Do blueberries have phytochemicals?
-                                </button>
-                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                                    Are collards a good source of phytochemicals?
-                                </button>
-                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
-
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type scrambled it to make
-                                            a type specimen book.</p>
+                                        {{singlefaq.respuesta}}
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="faq-btn">
-                        <a href="#" class="btn btn-primary btn-hover-secondary">Other’s Question</a>
+                        <a routerLink="/contacto" class="btn btn-primary btn-hover-secondary">Tienes otra pregunta?</a>
                     </div>
                 </div>
             </div>
