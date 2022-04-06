@@ -1,4 +1,4 @@
-<div class="section page-banner-section" style="background-image: url(assets/images/page-banner.jpg);">
+<div class="section page-banner-section" style="background-image: url(assets/images/5307.png);">
     <div class="container">
         <div class="page-banner-content">
             <h2 class="page-title">Blog</h2>
@@ -9,14 +9,13 @@
         </div>
     </div>
 </div>
-<div class="section section-padding-02">
+<div style="background-image: url(assets/images/font.png);">
     <div class="container">
         <div class="blog-wrapper-02">
             <div class="row gx-xxl-5">
-
                 <div *ngFor="let bl of blog" class="col-lg-4 col-md-6">
                     <a routerLink="/blog/{{bl.nombre}}">
-                        <div class="single-blog">
+                        <div class="single-blog" style="background-color:#FCD8B4; border-color: black;">
                             <div class="blog">
                                 <div class="blog-date-meta">
                                     <span>
@@ -24,7 +23,8 @@
                                         {{bl.fecha[1]}}
                                     </span>
                                     <div class="meta">
-                                        <p class="author">Por: <a routerLink="/acerca-de-mi">Jovita Fernanda Soto Ramírez</a></p>
+                                        <p class="author">Por: <a routerLink="/acerca-de-mi">Jovita Fernanda Soto
+                                                Ramírez</a></p>
                                     </div>
                                 </div>
                                 <h4 class="title"><a routerLink="/blog/{{bl.nombre}}">{{bl.nombre}}</a></h4>

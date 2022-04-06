@@ -119,6 +119,14 @@
     scroll-behavior: auto;
 }
 
+#font-back {
+    background-image: url(../images/font.png);
+}
+
+.font-back {
+    background-image: url(../images/font.png);
+}
+
 body {
     user-select: none;
     font-size: 15px;
@@ -4193,13 +4201,6 @@ only screen and (max-width: 575px) {
     background-position: center center;
     background-size: cover;
     padding-top: 100px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px),
-only screen and (max-width: 767px) {
-    .page-banner-section {
-        padding-top: 80px;
-    }
 }
 
 .page-banner-content {
