@@ -59,16 +59,17 @@
 
 /*-- Google Font --*/
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"); */
+
 
 /*-- Custom Font --*/
 
 @font-face {
-    font-family: 'Gordita';
-    src: url("../fonts/NexaLight.otf");
+    font-family: 'NexaFont';
+    src: url("../fonts/Questrial-Regular.ttf");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
 }
 
 
@@ -81,7 +82,8 @@
   font-display: swap;
 } */
 
-@font-face {
+
+/* @font-face {
     font-family: 'Gordita';
     src: url("../fonts/Gordita-Regular.eot");
     src: url("../fonts/Gordita-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gordita-Regular.woff2") format("woff2"), url("../fonts/Gordita-Regular.woff") format("woff"), url("../fonts/Gordita-Regular.ttf") format("truetype");
@@ -106,7 +108,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 
 /*-- Common Style --*/
@@ -132,7 +134,7 @@ body {
     font-size: 15px;
     line-height: 1.75;
     font-weight: 400;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     color: #52565b;
     outline: none;
     visibility: visible;
@@ -445,7 +447,7 @@ textarea:-ms-input-placeholder {
 }
 
 .section-title .sub-title {
-    font-family: "Gordita";
+    font-family: "NexaFont";
     font-size: 14px;
     font-weight: 700;
     color: #0a4d3c;
@@ -883,7 +885,7 @@ select {
     appearance: none;
     background-position: calc(100% - 25px) 50%;
     background-repeat: no-repeat;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     width: 100%;
     border: none;
     background-color: #f7f7f7;
@@ -1921,7 +1923,7 @@ only screen and (max-width: 767px) {
     font-weight: 500;
     color: #2c241b;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 .modal .modal-dialog .modal-content .reviews-form {
@@ -1982,7 +1984,7 @@ only screen and (max-width: 767px) {
 }
 
 .slider-content .sub-title {
-    font-family: "Gordita";
+    font-family: "NexaFont";
     font-weight: 700;
     font-size: 14px;
     color: #0a4d3c;
@@ -2640,7 +2642,7 @@ only screen and (max-width: 767px) {
 }
 
 .about-content .sub-title {
-    font-family: "Gordita";
+    font-family: "NexaFont";
     font-size: 14px;
     font-weight: 700;
     color: #0a4d3c;
@@ -2673,7 +2675,7 @@ only screen and (max-width: 767px) {
 }
 
 .about-content .count {
-    font-family: "Gordita";
+    font-family: "NexaFont";
     font-size: 30px;
     font-weight: 500;
     color: #0a4d3c;
@@ -7039,7 +7041,7 @@ only screen and (max-width: 767px) {
 .courses-video-playlist .playlist-title .title {
     font-size: 22px;
     font-weight: 500;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     color: #2c241b;
     margin-bottom: 0;
     margin-top: 10px;
@@ -7475,7 +7477,7 @@ only screen and (max-width: 767px) {
     font-weight: 500;
     color: #2c241b;
     padding-top: 20px;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -7761,7 +7763,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     margin-top: 18px;
     display: block;
     line-height: 1.5;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
@@ -8060,7 +8062,7 @@ only screen and (max-width: 767px) {
 .courses-resources .title {
     font-size: 25px;
     font-weight: 500;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
@@ -8408,7 +8410,7 @@ only screen and (max-width: 767px) {
     font-weight: 400;
     color: #2c241b;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -8536,7 +8538,7 @@ only screen and (max-width: 767px) {
     margin-bottom: 0;
     padding-top: 15px;
     line-height: 1.4;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (max-width: 575px) {
@@ -8584,7 +8586,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     font-size: 15px;
     font-weight: 400;
     color: #2c241b;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     margin-bottom: 0;
 }
 
@@ -8670,7 +8672,7 @@ only screen and (max-width: 575px) {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px),
@@ -8809,7 +8811,7 @@ only screen and (max-width: 575px) {
     text-align: center;
     padding: 16px;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (max-width: 575px) {
@@ -8956,7 +8958,7 @@ only screen and (max-width: 575px) {
     text-align: center;
     padding: 14px;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 .single-student-widget .widget-items {
@@ -9155,7 +9157,7 @@ only screen and (max-width: 767px) {
     color: #fff;
     margin-bottom: 0;
     line-height: 1.5;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (max-width: 575px) {
@@ -9288,7 +9290,7 @@ only screen and (max-width: 767px) {
     font-weight: 500;
     color: #2c241b;
     margin-top: 25px;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 .months-select {
@@ -9521,7 +9523,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     color: #2c241b;
     display: inline-block;
     line-height: 1.5;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px),
@@ -9938,7 +9940,7 @@ only screen and (max-width: 767px) {
     font-size: 20px;
     font-weight: 500;
     color: #2c241b;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     line-height: 1.4;
 }
 
@@ -10104,7 +10106,7 @@ only screen and (max-width: 767px) {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (max-width: 575px) {
@@ -10263,7 +10265,7 @@ only screen and (max-width: 767px) {
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 8px;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
@@ -10489,7 +10491,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
 }
 
 .single-message .message-author .author-content .name strong {
@@ -10512,7 +10514,7 @@ only screen and (max-width: 767px) {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 0;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     line-height: 1.4;
 }
 
@@ -10671,7 +10673,7 @@ only screen and (max-width: 767px) {
     height: 200px;
     border: 1px solid #e0dddb;
     border-radius: 5px;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     font-weight: 400;
     color: #52565b;
     margin-top: 0;
@@ -11046,7 +11048,7 @@ only screen and (max-width: 575px) {
     font-size: 15px;
     font-weight: 500;
     color: #343a40;
-    font-family: "Gordita";
+    font-family: "NexaFont";
     line-height: 1.4;
 }
 
