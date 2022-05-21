@@ -4193,6 +4193,30 @@ only screen and (max-width: 575px) {
     }
 }
 
+.pd-bt-50 {
+    padding-bottom: 50px;
+}
+
+.pd-bt-100 {
+    padding-bottom: 100px;
+}
+
+.st-img1 {
+    background-image: url(../images/fonts/fresa-01.png);
+    background-repeat: repeat;
+    background-color: #FCD8B4;
+}
+
+.st-img2 {
+    background-image: url(../images/fonts/fresa-02.png);
+    background-repeat: repeat;
+    background-color: #E9967A;
+}
+
+.border-radious {
+    border-radius: 25px;
+}
+
 
 /*--
 /*  4.9 - Page Banner CSS
@@ -4202,12 +4226,11 @@ only screen and (max-width: 575px) {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding-top: 100px;
 }
 
 .page-banner-content {
-    padding-top: 135px;
-    padding-bottom: 140px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
@@ -4221,7 +4244,7 @@ only screen and (max-width: 767px) {
 @media only screen and (max-width: 575px) {
     .page-banner-content {
         padding-top: 55px;
-        padding-bottom: 60px;
+        padding-bottom: 10px;
     }
 }
 
@@ -11163,6 +11186,7 @@ only screen and (max-width: 575px) {
 
 .footer-widget-wrapper {
     margin-top: -50px;
+    position: relative;
 }
 
 .footer-widget {
