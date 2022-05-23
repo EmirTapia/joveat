@@ -66,10 +66,15 @@
 /*-- Custom Font --*/
 
 @font-face {
-    font-family: 'NexaFont';
-    src: url("../fonts/Questrial-Regular.ttf");
+    font-family: 'Poiret One';
+    src: url("../fonts/Poiret_One/PoiretOne-Regular.ttf");
     font-weight: 300;
-    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cookie';
+    src: url("../fonts/Cookie/Cookie-Regular.ttf");
+    font-weight: 300;
 }
 
 
@@ -148,13 +153,16 @@ body[dir="rtl"] {
     text-align: right;
 }
 
+.cookiee {
+    font-family: "Cookie", serif;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Playfair Display", serif;
     color: #2c241b;
     font-weight: 00;
     line-height: 1.1;
@@ -1943,7 +1951,7 @@ only screen and (max-width: 767px) {
 /*----------------------------------------*/
 
 .single-slider {
-    height: 940px;
+    height: 100vh;
     padding-top: 100px;
     padding-bottom: 105px;
     position: relative;
@@ -2716,7 +2724,6 @@ only screen and (max-width: 575px) {
 
 .single-courses .courses-images a {
     display: block;
-    background-color: wheat;
 }
 
 .single-courses .courses-images a img {
@@ -4202,19 +4209,18 @@ only screen and (max-width: 575px) {
 }
 
 .st-img1 {
-    background-image: url(../images/fonts/fresa-01.png);
+    background-image: url(../images/fonts/font-02.png);
     background-repeat: repeat;
-    background-color: #FCD8B4;
 }
 
 .st-img2 {
-    background-image: url(../images/fonts/fresa-02.png);
+    background-image: url(../images/fonts/font-02.png);
     background-repeat: repeat;
     background-color: #E9967A;
 }
 
 .border-radious {
-    border-radius: 25px;
+    border-radius: 7px;
 }
 
 
@@ -4226,11 +4232,12 @@ only screen and (max-width: 575px) {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    padding-top: 100px;
 }
 
 .page-banner-content {
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 135px;
+    padding-bottom: 140px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
@@ -4244,7 +4251,7 @@ only screen and (max-width: 767px) {
 @media only screen and (max-width: 575px) {
     .page-banner-content {
         padding-top: 55px;
-        padding-bottom: 10px;
+        padding-bottom: 60px;
     }
 }
 
@@ -4279,7 +4286,7 @@ only screen and (max-width: 767px) {
 
 .page-banner-content .breadcrumb .breadcrumb-item {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: #2c241b;
 }
 
@@ -4289,7 +4296,7 @@ only screen and (max-width: 767px) {
 }
 
 .page-banner-content .breadcrumb .breadcrumb-item.active {
-    color: #ffa300;
+    color: #0A4D3C;
 }
 
 
@@ -7709,7 +7716,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .courses-item .content-title {
-    max-width: 445px;
+    max-width: auto;
     padding-left: 45px;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -7725,7 +7732,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .courses-item .content-title {
-        max-width: 460px;
+        max-width: auto;
     }
 }
 
@@ -7751,7 +7758,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     line-height: 18px;
     padding: 0 13px;
     border-radius: 50px;
-    display: inline-block;
     font-size: 11px;
     font-weight: 400;
 }
@@ -7781,9 +7787,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .courses-item .content-title .title a {
     font-size: 20px;
-    font-weight: 500;
     color: #2c241b;
-    margin-top: 18px;
     display: block;
     line-height: 1.5;
     font-family: "NexaFont";
@@ -7805,7 +7809,8 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     color: #ffa300;
 }
 
-.courses-item .content-wrapper {
+
+/* .courses-item .content-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7824,7 +7829,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     flex: 1;
     margin-left: -18px;
     margin-right: -18px;
-}
+} */
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px),
 only screen and (max-width: 767px) {
@@ -7894,7 +7899,6 @@ only screen and (max-width: 767px) {
 .courses-item .content-wrapper .content-box {
     width: 180px;
     padding: 15px 25px;
-    border-radius: 10px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
@@ -7934,10 +7938,18 @@ only screen and (max-width: 767px) {
 }
 
 .courses-item .content-wrapper .content-box .count {
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: 3px;
     display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 76px;
+    border: 2px solid #f8f6f4;
+    border-radius: 50%;
+    background-color: #E5CCFF;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px),
@@ -8000,9 +8012,10 @@ only screen and (max-width: 767px) {
     }
 }
 
-.courses-item .content-wrapper .content-box:nth-of-type(1) {
+
+/* .courses-item .content-wrapper .content-box:nth-of-type(1) {
     background-color: #e5ecff;
-}
+} */
 
 .courses-item .content-wrapper .content-box:nth-of-type(1) .count {
     color: #0f42cd;
