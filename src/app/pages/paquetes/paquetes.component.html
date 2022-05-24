@@ -17,38 +17,11 @@
             <br />
         </div>
         <div class="courses courses-wrapper-02">
-            <!-- <div class="row gx-xxl-5">
-                <div *ngFor="let paquete of paquetes" class="col-lg-4 col-sm-6">
-                    <div class="single-courses">
-                        <div class="courses-images">
-                            <a><img routerLink="/paquete/{{paquete.nombre}}" src="assets/images/courses/courses-1.png" alt="courses"></a>
-                        </div>
-                        <div class="courses-content">
-                            <div class="courses-price">
-                                <span class="price">${{paquete.precio}}</span>
-                            </div>
-                            <div class="content-wrapper">
-                                <h4 class="title"><a routerLink="/paquete/{{paquete.nombre}}">{{paquete.nombre}}</a></h4>
-                                <ul class="meta">
-                                    <li>{{paquete.duracion}}</li>
-                                    <li>{{paquete.tipo}}</li>
-                                </ul>
-                                <ul class="meta">
-                                    <li>{{paquete.dirigido}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div> -->
             <div class="row justify-content-center">
                 <div *ngFor="let paquete of paquetes" class=" admin-courses-tab-content col-lg-8">
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab1">
                             <div routerLink="/paquete/{{paquete.nombre}}" class="courses-item align-content-center align-items-center">
-
                                 <div class="item-thumb">
                                     <a>
                                         <img src="assets/images/courses/courses-1.png" alt="Courses">
